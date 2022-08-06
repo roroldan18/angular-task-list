@@ -25,4 +25,10 @@ export const TASK:ITask[] = [
     day: 'Agosto 5 a las 21:00',
     reminder: false
   },
+  {
+    id: 5,
+    text: 'Comprar Birra',
+    day: 'Agosto 5 a las 24:00',
+    reminder: true
+  },
 ] 
