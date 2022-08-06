@@ -29,6 +29,12 @@
       "text": "Comprar Birra",
       "day": "Agosto 5 a las 24:00",
       "reminder": false
+    },
+    {
+      "text": "Tarea",
+      "day": "alguna dia",
+      "reminder": false,
+      "id": 6
     }
   ]
 }

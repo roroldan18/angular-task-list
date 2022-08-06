@@ -31,7 +31,7 @@ export class TaskService {
   }
 
   addTask(task:ITask):Observable<ITask> {
-    return this.http.post<ITask>(this.apiUrl, task);
+    return this.http.post<ITask>(this.apiUrl, task, httpOptions);
   }
 
   onToggleReminder(task:ITask):Observable<ITask>{

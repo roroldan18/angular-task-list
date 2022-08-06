@@ -14,10 +14,14 @@ export class TasksComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getTaskComp();
+  };
+
+  getTaskComp(){
     this.taskService.getTasks().subscribe((task)=>{
       this.tasks = task;
     })
-  };
+  }
 
   deleteTask(task:ITask){
    this.taskService.deleteTask(task)
@@ -29,6 +33,10 @@ export class TasksComponent implements OnInit {
   toggleReminder(task:ITask){
     task.reminder = !task.reminder;
     this.taskService.onToggleReminder(task).subscribe();
+  }
+
+  addTask(task:ITask){
+    this.taskService.addTask(task).subscribe(() => this.getTaskComp());
   }
 
 }
