@@ -12,7 +12,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddTaskComponent } from './components/add-task/add-task.component';
 import { FormsModule } from '@angular/forms';
 
+import { RouterModule, Routes } from '@angular/router';
+import { AboutComponent } from './components/about/about.component';
+import { FooterComponent } from './components/footer/footer.component';
 
+//Los router se suelen manejar en archivos aparte.
+const appRoutes:Routes = [
+  {path: '', component:TasksComponent},
+  {path: 'about', component:AboutComponent}
+]
 
 @NgModule({
   declarations: [
@@ -22,11 +30,14 @@ import { FormsModule } from '@angular/forms';
     TasksComponent,
     TaskItemComponent,
     AddTaskComponent,
+    AboutComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    RouterModule.forRoot(appRoutes, {enableTracing:true}),
     FontAwesomeModule,
     FormsModule 
   ],
