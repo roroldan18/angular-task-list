@@ -1,0 +1,6 @@
+
+export enum TYPETASK {
+  WORK,
+  PERSONAL,
+  EDUCATION
+}

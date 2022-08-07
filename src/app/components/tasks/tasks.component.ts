@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ITask } from 'src/app/Task';
 import { TaskService } from '../../services/task.service';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-tasks',
@@ -9,18 +10,37 @@ import { TaskService } from '../../services/task.service';
 })
 export class TasksComponent implements OnInit {
   tasks: ITask[] = [];
+  noTask:boolean = false;
+  
 
-  constructor(private taskService: TaskService) {
+  constructor(
+    private taskService: TaskService,
+    private activatedRoute: ActivatedRoute
+    ) {
   }
 
   ngOnInit(): void {
-    this.getTaskComp();
+    
+    this.activatedRoute.params.subscribe((param: Params) => {
+      this.getTaskComp(parseInt(param["id"]));
+    })
   };
 
-  getTaskComp(){
-    this.taskService.getTasks().subscribe((task)=>{
-      this.tasks = task;
-    })
+  getTaskComp(id?:number){
+    if(!id){
+      this.taskService.getTasks().subscribe((task)=>{
+        this.tasks = task;
+      })
+    }else{
+      this.taskService.getTasks().subscribe((task)=>{
+        this.tasks = task.filter(t => t.id === id);
+
+        if (this.tasks.length === 0){
+          this.noTask = true;
+        }
+
+      }); 
+    }
   }
 
   deleteTask(task:ITask){
