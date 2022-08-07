@@ -8,20 +8,6 @@
       "id": 7
     },
     {
-      "text": "Comprar libro \"La batalla cultural\"",
-      "day": "2022-08-21T12:54",
-      "reminder": false,
-      "type": "WORK",
-      "id": 8
-    },
-    {
-      "text": "Cambiar luz del baño",
-      "day": "2022-08-03T12:54",
-      "reminder": false,
-      "type": "EDUCATION",
-      "id": 9
-    },
-    {
       "text": "Comenzar facultad",
       "day": "2022-09-08T12:54",
       "reminder": false,
@@ -46,13 +32,6 @@
       "day": "2022-08-05T15:46",
       "reminder": true,
       "id": 17
-    },
-    {
-      "text": "Nueva Tarea con ICON ",
-      "day": "2022-08-13T17:47",
-      "reminder": true,
-      "type": "EDUCATION",
-      "id": 18
     }
   ]
 }

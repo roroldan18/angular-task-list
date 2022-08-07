@@ -34,8 +34,8 @@ export class AddTaskComponent implements OnInit {
   }
 
   onSubmit(){
-    if(!this.text){
-      return alert("Please, add text");
+    if(!this.text || this.text.trim() === '' || !this.day || !this.type){
+      return alert("All the fields are required");
     }
 
     const {text, day, reminder, type} = this;
