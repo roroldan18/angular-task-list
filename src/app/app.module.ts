@@ -16,12 +16,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
 
-//Los router se suelen manejar en archivos aparte.
-const appRoutes:Routes = [
-  {path: '', component:TasksComponent},
-  {path: 'about', component:AboutComponent}
-]
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +31,6 @@ const appRoutes:Routes = [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes, {enableTracing:true}),
     FontAwesomeModule,
     FormsModule 
   ],

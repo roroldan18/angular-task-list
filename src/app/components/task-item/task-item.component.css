@@ -3,6 +3,7 @@
   margin: 5px;
   padding: 10px 20px;
   cursor: pointer;
+  transition: 0.2s;
 }
 
 .task.reminder{
@@ -13,4 +14,29 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+
+.task.overdue{
+  background-color: rgba(249, 119, 171, 0.558);
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.task.overdue::after{
+  content: "Overdue";
+  color: red;
+}
+
+.task.nextToOverdue{
+  background-color: rgba(255, 252, 84, 0.752);
+}
+.task.nextToOverdue::after{
+  content: "Next to overdue";
+  color: green;
+}
+
+
+.task:hover{
+  opacity: 0.6;
 }

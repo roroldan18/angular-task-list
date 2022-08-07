@@ -2,6 +2,7 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import { TASK } from 'src/app/mock-task';
 import { ITask } from 'src/app/Task';
+import { convertMsToHours } from 'src/utils/convertMsToTime';
 
 
 @Component({
@@ -11,14 +12,21 @@ import { ITask } from 'src/app/Task';
 })
 export class TaskItemComponent implements OnInit {
   faTimes = faTimes;
+  overdue: boolean = false;
+  nextToOverdue:boolean = false;
 
   @Input() task: ITask = TASK[0];
   @Output() onDeleteTask:EventEmitter<ITask> = new EventEmitter();
   @Output() onToggleReminder:EventEmitter<ITask> = new EventEmitter();
 
-  constructor() { }
-
+  constructor() {
+  }
+  
   ngOnInit(): void {
+    // Check if task is overdue
+    this.overdue = this.checkOverdueTask(this.task)<0;
+    // Check if task will overdue in the next 72 hours and if not overdue yet.
+    this.nextToOverdue = !this.overdue && this.checkOverdueTask(this.task)<72;
   }
 
   onDelete(task:ITask){
@@ -27,6 +35,15 @@ export class TaskItemComponent implements OnInit {
 
   onToggle(task:ITask){
     this.onToggleReminder.emit(task);
+  }
+
+  checkOverdueTask(task:ITask){
+    const now = new Date();
+    const taskDate = new Date(task.day);
+    
+    const getDistance = taskDate.getTime() - now.getTime();
+
+    return convertMsToHours(getDistance);
   }
 
 }

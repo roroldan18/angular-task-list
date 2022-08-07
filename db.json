@@ -1,34 +1,46 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "text": "Terminar primer módulo de Angular",
-      "day": "Agosto 5 a las 12:00",
-      "reminder": true
+      "text": "Tarea vencida",
+      "day": "2022-08-04T13:52",
+      "reminder": false,
+      "id": 7
     },
     {
-      "id": 2,
-      "text": "Hacer las compras para la cena",
-      "day": "Agosto 5 a las 17:00",
-      "reminder": true
+      "text": "Comprar libro \"La batalla cultural\"",
+      "day": "2022-08-21T12:54",
+      "reminder": true,
+      "id": 8
     },
     {
-      "id": 3,
-      "text": "Investigar sobre Boostrap",
-      "day": "Agosto 5 a las 19:00",
-      "reminder": false
+      "text": "Cambiar luz del baño",
+      "day": "2022-08-03T12:54",
+      "reminder": false,
+      "id": 9
     },
     {
-      "id": 4,
-      "text": "Leer mi libro favorito",
-      "day": "Agosto 5 a las 21:00",
-      "reminder": true
+      "text": "Comenzar facultad",
+      "day": "2022-09-08T12:54",
+      "reminder": true,
+      "id": 10
     },
     {
-      "id": 5,
-      "text": "Comprar Birra",
-      "day": "Agosto 5 a las 24:00",
-      "reminder": false
+      "text": "Examen Angular",
+      "day": "2022-10-01T12:54",
+      "reminder": true,
+      "id": 11
+    },
+    {
+      "text": "Tarea",
+      "day": "2022-08-27T17:10",
+      "reminder": true,
+      "id": 15
+    },
+    {
+      "text": "Tarea Proxima a vencer",
+      "day": "2022-08-08T13:31",
+      "reminder": true,
+      "id": 16
     }
   ]
 }
