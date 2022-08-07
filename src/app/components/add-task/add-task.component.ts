@@ -2,6 +2,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ITask } from 'src/app/Task';
 import { UiService } from 'src/app/services/ui.service';
 import { Subscription } from 'rxjs';
+import { IRouteIcon, routeIconType, TYPETASK } from '../../TypeTask';
 
 @Component({
   selector: 'app-add-task',
@@ -16,9 +17,13 @@ export class AddTaskComponent implements OnInit {
   text:string = "";
   day:string = "";
   reminder:boolean = false;
+  type?: TYPETASK = undefined;
+
+  routeTypes:IRouteIcon[] = routeIconType;
   
   showAddTask:boolean = false;
   subscription?: Subscription;
+
 
 
   constructor(private uiService:UiService) {
@@ -30,11 +35,11 @@ export class AddTaskComponent implements OnInit {
 
   onSubmit(){
     if(!this.text){
-      alert("Please, add text")
+      return alert("Please, add text");
     }
 
-    const {text, day, reminder} = this;
-    const newTask = {text, day, reminder};
+    const {text, day, reminder, type} = this;
+    const newTask = {text, day, reminder, type};
 
     this.onAddTask.emit(newTask);
 

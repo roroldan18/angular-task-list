@@ -25,6 +25,14 @@
       >
   </div>
 
+  <div class="form-control">
+    <label for="type">Type</label>
+    <select name="type" id="type" [(ngModel)]="type">
+      <option selected disabled value="undefined">Select a type</option>
+      <option *ngFor="let type of routeTypes" value="{{type.title}}">{{type.title}}</option>
+    </select>
+  </div>
+
   <div class="form-control form-control-check">
     <label for="reminder">Reminder</label>
     <input 

@@ -8,9 +8,15 @@
   (click)="onToggle(task)"
   >
   <h3>
-    {{task.text}} 
+    <span>
+      <fa-icon
+        *ngIf="this.taskIcon"
+        [icon]=this.taskIcon
+      ></fa-icon>
+      {{task.text}} 
+    </span>
     <fa-icon 
-      [icon]="faTimes" 
+      [icon]="faTimes"
       [ngStyle]="{'color':'red'}" 
       (click)="onDelete(task)"
     ></fa-icon>

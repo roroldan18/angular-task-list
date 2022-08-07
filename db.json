@@ -4,30 +4,35 @@
       "text": "Tarea vencida",
       "day": "2022-08-04T13:52",
       "reminder": false,
+      "type": "PERSONAL",
       "id": 7
     },
     {
       "text": "Comprar libro \"La batalla cultural\"",
       "day": "2022-08-21T12:54",
-      "reminder": true,
+      "reminder": false,
+      "type": "WORK",
       "id": 8
     },
     {
       "text": "Cambiar luz del baño",
       "day": "2022-08-03T12:54",
       "reminder": false,
+      "type": "EDUCATION",
       "id": 9
     },
     {
       "text": "Comenzar facultad",
       "day": "2022-09-08T12:54",
-      "reminder": true,
+      "reminder": false,
+      "type": "EDUCATION",
       "id": 10
     },
     {
       "text": "Examen Angular",
       "day": "2022-10-01T12:54",
       "reminder": true,
+      "type": "PERSONAL",
       "id": 11
     },
     {
@@ -35,6 +40,19 @@
       "day": "2022-08-08T13:31",
       "reminder": true,
       "id": 16
+    },
+    {
+      "text": "Nueva Tarea con Icon",
+      "day": "2022-08-05T15:46",
+      "reminder": true,
+      "id": 17
+    },
+    {
+      "text": "Nueva Tarea con ICON ",
+      "day": "2022-08-13T17:47",
+      "reminder": true,
+      "type": "EDUCATION",
+      "id": 18
     }
   ]
 }

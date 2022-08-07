@@ -3,3 +3,8 @@
 .add-form{
   margin-bottom: 40px;
 }
+
+select{
+  margin: 5px;
+  padding: 6px;
+}
